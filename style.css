@@ -1,10 +1,16 @@
 body {
     background-color: gray;	
+    font-family: "Times New Roman";
+    justify-content: center;
+}
+
+p {
+    font-size: 18;
+
 }
 
 .link-container {
     display: flex;
-    justify-content: center; 
     gap: 30px; 
     margin-top: 20px;
 }
