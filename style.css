@@ -1,18 +1,18 @@
 body {
     background-color: gray;	
     font-family: "Times New Roman";
-    justify-content: center;
 }
 
 p {
     font-size: 18;
-
+    text-align: center;
 }
 
 .link-container {
     display: flex;
     gap: 30px; 
     margin-top: 20px;
+    text-align: center;
 }
 
 .link-images {
@@ -20,8 +20,10 @@ p {
     height: 60px; 
     object-fit: contain;
     transition: transform 0.2s ease; 
+    text-align: center;
 }
 
 .link-images:hover {
     transform: scale(1.1);
+    text-align: center;
 }
