@@ -1,6 +1,7 @@
 body {
     background-color: gray;	
     font-family: "Times New Roman";
+    text-align: center;
 }
 
 .bio {
@@ -10,21 +11,22 @@ body {
 
 .link-container {
     display: flex;
+    justify-content: center;
     gap: 30px; 
     margin-top: 20px;
-    text-align: center;
+}
+
+.link-container a {
+    display: block;
 }
 
 .link-images {
-    width: 60px;
-    height: 60px; 
+    width: 60px;  
+    height: 60px;
     object-fit: contain;
-    transition: transform 0.2s ease; 
-    display: block;   
-    margin: 0 auto;     
+    transition: transform 0.2s ease;
 }
 
 .link-images:hover {
-    transform: scale(1.1);
-    text-align: center;
+    transform: scale(1.1); 
 }
