@@ -2,6 +2,8 @@ body {
     background-color: gray;	
     font-family: "Times New Roman";
     text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .bio {
