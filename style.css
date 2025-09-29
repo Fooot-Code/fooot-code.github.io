@@ -20,7 +20,8 @@ body {
     height: 60px; 
     object-fit: contain;
     transition: transform 0.2s ease; 
-    text-align: center;
+    display: block;   
+    margin: 0 auto;     
 }
 
 .link-images:hover {
