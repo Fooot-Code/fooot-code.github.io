@@ -1,71 +1,104 @@
+/* Basic page layout */
 body {
-    background-color: gray;	
-    font-family: "Times New Roman";
-    text-align: center;
-    margin: 0 auto;
-    max-width: 600px; 
-} 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3b3b3b;
+    color: #222;
+}
 
+/* Navbar */
+.navbar {
+    background-color: #222;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Page content container */
+.container {
+    max-width: 900px;
+    margin: 30px;
+}
+
+/* Headings */
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: rgb(0, 205, 188);
+}
+
+h2 {
+    margin-top: 25px;
+    font-size: 24px;
+    color: rgb(175, 175, 175);
+}
+h3 {
+  color: rgb(175, 175, 175);
+}
+h4 {
+  color: rgb(175, 175, 175);
+}
+p {
+  color: rgb(175, 175, 175);
+}
+
+/* Bio text */
 .bio {
     font-size: 18px;
-    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+    color: rgb(175, 175, 175);
 }
 
+/* Social icons */
 .link-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
     margin-top: 20px;
-}
-
-.link-container a {
-    display: block;
+    display: flex;
+    gap: 15px;
 }
 
 .link-images {
-    width: 60px;  
-    height: 60px;
-    object-fit: contain;
+    width: 50px;
     transition: transform 0.2s ease;
 }
 
 .link-images:hover {
-    transform: scale(1.1); 
+    transform: scale(1.05);
 }
 
 .projects {
-  display: inline-block;
-  justify-content: center;
+  color:rgb(175, 175, 175);
 }
 
-.navbar {
-  display: inline-block;
-  justify-content: center; /* centers horizontally */
-  background: #b8b8b8; /* optional: gives it a navbar look */
-  padding: 10px 10px;
-  border-radius: 8px;
-  max-width: 400px;
-  
+.projects a {
+  color:rgb(114, 101, 255);
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  gap: 20px; /* space between items */
-}
-
-.navbar a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  padding: 8px 12px;
-  transition: background 0.2s ease;
-}
-
-.navbar a:hover {
-  background: #707070;
-  border-radius: 6px;
+#fortune {
+  border: 2px solid #333;
+  padding: 10px;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 20px; 
+  display: block;
 }
