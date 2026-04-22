@@ -1,46 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>More About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Brennon Hill</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="javascriptPracice.html">Javascript Pracice</a></li>
-            <li><a href="moreAboutMe.html">More About Me</a></li>
+            <li><a href="javascriptPracice.html">JavaScript Practice</a></li>
+            <li><a href="moreAboutMe.html" class="active">About Me</a></li>
         </ul>
-    </div>
+    </nav>
 
     <div class="container">
-        <h1>Welcome!</h1>
-        <h2>Here is a little more about me</h2>
-
-        <h3>Bio and School:</h3>
-        <p class="bio">
-            I am a High School Junior who is passionate in programming and who is working towards my PCEP 
-            and Linux Pro Certifications. I am in my school's robotics club and soccer team.
-        </p>
-
-        <h4>Home School:</h4>
-        <div class="school-info">
-            <a href="https://dakotaridge.jeffcopublicschools.org/">
-                <img src="images/drhsLogo.webp" class="link-images" alt="Dakota Ridge High School Logo">
-            </a>
+        <div class="hero">
+            <h1>More About Me</h1>
+            <p class="tagline">My Background and Goals</p>
         </div>
 
-        <h4>Warren Tech:</h4>
-        <p>I go here for my Computer Science and Cybersecurity class</p>
-        <div class="school-info">
-            <a href="https://warrentech.jeffcopublicschools.org/">
-                <img src="images/warrenTechLogo.webp" class="link-images" alt="Warren Tech Logo">
-            </a>
+        <h2>Education</h2>
+        <div class="card">
+            <h4>Dakota Ridge High School</h4>
+            <p class="bio">Class of 2027 | Junior</p>
+            <p class="bio">Involved in robotics club (FRC Team 1799) and the school's varsity soccer team. I've been actively developing my technical skills through hands-on club activities and competitive team sports.</p>
+            <div class="school-info">
+                <a href="https://dakotaridge.jeffcopublicschools.org/">
+                    <img src="images/drhsLogo.webp" class="link-images" alt="Dakota Ridge High School Logo">
+                </a>
+            </div>
         </div>
 
-        <h3>Contact Info</h3>
+        <div class="card">
+            <h4>Warren Tech</h4>
+            <p class="bio">Computer Science and Cybersecurity Program</p>
+            <p class="bio">Through Warren Tech's program, I'm gaining practical experience in software development, system administration, and cybersecurity fundamentals. I'm also working on the NASA HUNCH project, developing AI-powered preventive maintenance systems for aerospace applications.</p>
+            <div class="school-info">
+                <a href="https://warrentech.jeffcopublicschools.org/">
+                    <img src="images/warrenTechLogo.webp" class="link-images" alt="Warren Tech Logo">
+                </a>
+            </div>
+        </div>
+
+        <h2>Certifications</h2>
+        <p class="bio">Industry certifications I've earned:</p>
+        <div class="cert-grid">
+            <img src="images/pcepcert.png" alt="PCEP Certification" class="cert-img">
+            <img src="images/acucert.png" alt="A+ Certification" class="cert-img">
+            <img src="images/testoutcert.png" alt="Network+ Certification" class="cert-img">
+        </div>
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag"> Robotics</span>
+        </div>
+
+        <h2>Contact</h2>
+        <p class="bio">Interested in connecting or collaborating? Feel free to reach out through any of these platforms:</p>
         <div class="link-container">
             <a href="https://www.linkedin.com/in/brennon-hill-81029a321">
                 <img src="images/linkedin.png" class="link-images" alt="LinkedIn">

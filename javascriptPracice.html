@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Brennon's Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice | Brennon Hill</title>
     <link rel="stylesheet" href="/styles.css">
-    <script src="javascriptPracticeScripts.js" defer></script> 
+    <script src="javascriptPracticeScripts.js" defer></script>
 </head>
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="javascriptPracice.html">Javascript Pracice</a></li>
-            <li><a href="moreAboutMe.html">More About Me</a></li>
-            
+            <li><a href="javascriptPracice.html" class="active">JavaScript Practice</a></li>
+            <li><a href="moreAboutMe.html">About Me</a></li>
         </ul>
-    </div>
+    </nav>
 
     <div class="container">
-        <h1>Welcome!</h1>
-        <button onclick="randomBackgroundColor()">Random Background Color</button>
-        <button onclick="getFortune()" id="fortuneButton">Get Your Fortune</button>
-        <h3>Fortune Box:</h3>
-        <p id="fortune"></p>
-        
+        <div class="hero">
+            <h1>JavaScript Practice</h1>
+            <p class="tagline">Learning by building small projects</p>
+        </div>
+
+        <p class="bio">
+            This section contains some simple JavaScript demos I've created while learning the language.
+            These are fun experiments to practice DOM manipulation and event handling.
+        </p>
+
+        <h2>Demos</h2>
+        <div class="card">
+            <h4>Random Background Color</h4>
+            <p class="bio">Click the button to generate a random background color.</p>
+            <button onclick="randomBackgroundColor()" class="btn">Random Background Color</button>
+        </div>
+
+        <div class="card">
+            <h4>Fortune Teller</h4>
+            <p class="bio">Get a random fortune with just a click.</p>
+            <button onclick="getFortune()" class="btn" id="fortuneButton">Get Your Fortune</button>
+            <div id="fortune"></div>
+        </div>
     </div>
 </body>
 </html>
