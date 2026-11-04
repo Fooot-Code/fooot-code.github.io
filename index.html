@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brennon Hill | Portfolio</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="javascriptPracice.html">JavaScript Practice</a></li>
-            <li><a href="moreAboutMe.html">About Me</a></li>
-        </ul>
-    </nav>
+  <!--SETUP: Fill in blank properties in HEAD-->
+  <link>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
 
-    <div class="container">
-        <div class="hero">
-            <h1>Hi, I'm Brennon</h1>
-            <p class="tagline">High School Developer & Tech Enthusiast</p>
-        </div>
+    <!-- Page title shown in browser tab -->
+    <title>WebGL Fluid Background</title>
 
-        <h2>About Me</h2>
-        <p class="bio">
-            I'm a junior at Dakota Ridge High School with a passion for programming and technology.
-            I'm involved in my school's robotics club, as well as a NASA HUNCH project through Warren Tech.
-            I love building projects that solve real problems and learning new technologies.
-        </p>
-        <p class="bio">
-            I'm fluent in Python and have experience with Java through my robotics club, as well as C programming
-            through Warren Tech's Computer Science program. My interests include automation, computer vision,
-            and building hardware-software integrations.
-        </p>
-        <p class="bio">
-            Feel free to explore my projects or learn more about my background below!
-        </p>
+    <!-- Responsive viewport settings for mobile devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
 
-        <h3>Connect</h3>
-        <div class="link-container">
-            <a href="https://www.linkedin.com/in/brennon-hill-81029a321">
-                <img src="images/linkedin.png" class="link-images" alt="LinkedIn">
-            </a>
+    <!-- Ensure compatibility with Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-            <a href="https://github.com/Fooot-Code">
-                <img src="images/github.png" class="link-images" alt="GitHub">
-            </a>
+    <!-- Enable full-screen appearance for iOS Safari -->
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
-            <a href="mailto:brennon.hill@gmail.com">
-                <img src="images/gmail.png" class="link-images" alt="Email">
-            </a>
-        </div>
-    </div>
-</body>
+    <!-- Description for search engines and SEO -->
+    <meta name="description" content="A WebGL-based fluid simulation adapted from PavelDoGreat's project, optimised for creating dynamic website backgrounds." />
+    <meta name="author" content="Thomas Kabalin" />
+
+    <!-- Open Graph metadata for social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+
+    <!--SETUP: add a browser tab icon-->
+    <link rel="icon" href="" type="image/png" />
+
+    <!--SETUP: update the file paths if you move the file-->
+    <link rel="stylesheet" href="fluid-overlay-styles.css" />
+
+    <!--REMOVE THE FOLLOWING LINE-->
+    <meta name="google-site-verification" content="KxV1WEjEkGzvRm3viGVmb1_nOUMs4bxHwcnRzFqIgxQ" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <canvas></canvas>
+
+    <div class="overlay-heading">Brennon Hill</div>
+
+
+    <!--END OF CONTENT-->
+
+    <!--SETUP: update the file paths if you move the file. Moving config and the LDR image requires making changes in the script-->
+    <script src="./webgl-fluid.js"></script>
+  </body>
 </html>

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: Jetbrains;
+  src: url(./fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Hero section wrapper for canvas and heading */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The animated canvas fills the hero section */
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* The main heading centered inside the hero flex container */
+/* The main heading of the website in the centre of the animation */
+.overlay-heading {
+  font-family: Jetbrains, monospace;
+  font-weight: bold; 
+  letter-spacing: .15em;
+  color: #bdede0;
+  font-size: 75px;
+  z-index: 1; /* above canvas */
+  pointer-events: none; /* ensures effect works under the heading */
+  
+  /* Flex centering inside the hero */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  /* Typing effect fix: use overflow hidden + steps without animating width of the centered box */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Keeps it constrained to its layout box */
+  animation: typing 3.5s steps(40, end) forwards;
+}
+
+/* Content below the animation canvas */
+.page-content {
+  padding: 40px 20px;
+  color: white; /* Switched to white for visibility on black background */
+  background-color: #111; /* Contrast background for scrollable content */
+  min-height: 50vh;
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+  .overlay-heading {
+    font-size: 6vw;
+  }
+}
+
+/* Portrait orientation */
+@media (orientation: portrait) {
+  .overlay-heading {
+    font-size: 12vw;
+  }
+}
