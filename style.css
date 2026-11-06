@@ -123,9 +123,9 @@ canvas {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   background-color: #415A7780;
-  border: none;
   color: #bdede0;
-  border-radius: 5px;
+  border-radius: 20px;
+  border-width: 3px;
   cursor: pointer;     
   transition: font-size 0.3s, background-color 0.3s;
 } 
@@ -144,8 +144,7 @@ canvas {
 }
 
 .animate-zoom {
-  animation: zoomIn 0.5s;
-  z-index: 1;
+  animation: zoomIn 4s;
 }
 
 
