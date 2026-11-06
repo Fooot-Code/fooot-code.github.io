@@ -10,6 +10,6 @@ if (buttons.length > 0) {
                 window.location.href = button.textContent.trim().toLowerCase() + ".html";
             });
             
-        });
+        }, { once: true });
     }
 }

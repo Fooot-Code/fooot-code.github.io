@@ -119,6 +119,7 @@ canvas {
   gap: 1rem; /* Adds nice spacing between heading and buttons */
 }
 
+
 .overview button { 
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -127,25 +128,87 @@ canvas {
   border-radius: 20px;
   border-width: 3px;
   cursor: pointer;     
-  transition: font-size 0.3s, background-color 0.3s;
+  /* Track padding changes over 0.3 seconds */
+  transition: padding 0.3s, font-size 0.3s, background-color 0.3s;
 } 
 
 .overview button:hover { 
   background-color: #415A77;
+  /* Increase padding on hover (e.g., adding 0.2rem to top/bottom and 0.5rem to sides) */
+  padding: 0.7rem 1.5rem;
 }
 
 @keyframes zoomIn {
-  to {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+  0% {
+    transform: translateY(0) rotate(0deg); 
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1); /* Accelerate downward */
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg); /* Halfway through the bounce and rotation */
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1); /* Decelerate upward */
+  }
+  100% {
+    transform: translateY(0) rotate(360deg); /* Completes the full spin back on the ground */
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
   }
 }
 
+
 .animate-zoom {
-  animation: zoomIn 4s;
+  animation: zoomIn 0.5s;
 }
+
+h1 {
+  font-family: Jetbrains, monospace;
+  color: #bdede0;
+  font-size: 2.5rem;
+}
+
+.projects {
+  max-width: 50vw;
+  padding: 1rem;
+  border-radius: 1rem; 
+  
+  /* 1. Make the border transparent so the background gradient shines through */
+  border: 0.3rem solid transparent;
+  
+  /* 2. Layer 1 (inner background) & Layer 2 (border gradient) */
+  background: 
+    linear-gradient(#0d1b2a, #0d1b2a) padding-box, 
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(56, 56, 56) 100%) border-box;
+}
+
+
+/* Restores standard padding to the main project list */
+.projects ul {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #ffffff; /* Matches your current color theme */
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 0.5rem;
+}
+
+/* Adds deeper padding and changes bullet style for the nested sub-list */
+.projects ul ul {
+  padding-left: 1.5rem;
+  list-style-type: circle;
+  margin-top: 0.25rem;
+}
+
+/* Adds vertical space between list entries for better legibility */
+.projects li {
+  
+  list-style-type: '> ';
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.projects li li {
+  
+  list-style-type: '➢ ';
+}
+
 
 
 /* Content below the animation canvas */
