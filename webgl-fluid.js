@@ -1632,10 +1632,10 @@ function runSimulation(config) {
   }
 
   // Mouse Movements
-  canvas.addEventListener("mousemove", (e) => {
+  window.addEventListener("mousemove", (e) => {
     let pointer = pointers[0];
-    let posX = scaleByPixelRatio(e.offsetX);
-    let posY = scaleByPixelRatio(e.offsetY);
+    let posX = scaleByPixelRatio(e.clientX);
+    let posY = scaleByPixelRatio(e.clientY);
 
     if (!pointer.down) {
       // Pointer is not down, so this is the start of a new move.

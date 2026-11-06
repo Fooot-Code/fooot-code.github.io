@@ -39,22 +39,26 @@
     <link rel="icon" href="" type="image/png" />
 
     <!--SETUP: update the file paths if you move the file-->
-    <link rel="stylesheet" href="fluid-overlay-styles.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!--REMOVE THE FOLLOWING LINE-->
     <meta name="google-site-verification" content="KxV1WEjEkGzvRm3viGVmb1_nOUMs4bxHwcnRzFqIgxQ" />
-    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <canvas></canvas>
+    <section class="hero">
+      <canvas></canvas>
+      <div class="overview">
+        <div class="overlay-heading">Brennon Hill</div>
+        <ul>
+          <button id="projects" class="sections">Projects</button>
+          <button id="about-me" class="sections">About Me</button>
+          <button id="contact" class="sections">Contact Information</button>
 
-    <div class="overlay-heading">Brennon Hill</div>
+        </ul>
+      </div>
+    </section>
 
-
-    <!--END OF CONTENT-->
-
-    <!--SETUP: update the file paths if you move the file. Moving config and the LDR image requires making changes in the script-->
     <script src="./webgl-fluid.js"></script>
   </body>
 </html>

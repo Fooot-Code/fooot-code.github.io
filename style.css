@@ -22,6 +22,7 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column; /* Stack children vertically */
+
 }
 
 /* Hero section wrapper for canvas and heading */
@@ -45,6 +46,18 @@ canvas {
   z-index: 0;
 }
 
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  z-index: 1;
+  width: fit-content;
+  pointer-events: none;
+  min-height: 100vh;
+}
+
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -55,26 +68,66 @@ canvas {
 .overlay-heading {
   font-family: Jetbrains, monospace;
   font-weight: bold; 
-  letter-spacing: .15em;
   color: #bdede0;
-  font-size: 75px;
+  font-size: 8vw;
   z-index: 1; /* above canvas */
-  pointer-events: none; /* ensures effect works under the heading */
+
+  text-shadow: 0 0 1rem black;
+
   
   /* Flex centering inside the hero */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 
   /* Typing effect fix: use overflow hidden + steps without animating width of the centered box */
-  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   width: 100%; /* Keeps it constrained to its layout box */
-  animation: typing 3.5s steps(40, end) forwards;
+  animation: typing 2s steps(40, end) forwards;
 }
+
+.sections {
+  font-family: Jetbrains, monospace;
+  font-weight: normal;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  
+  color: #bdede0;
+  border-radius: 10px;
+  padding: 0.5rem;
+
+  pointer-events: stroke;
+  cursor: pointer;     
+
+
+}
+
+.overview li { 
+  list-style-type: none;
+  display: flex;
+} 
+
+
+.overview button { 
+  padding: 0.5rem;
+  font-size: 1rem;
+
+  background-color: #415A7780;
+  transition: font-size 0.5s, background-color 0.5s;
+
+
+} 
+
+.overview button:hover { 
+  font-size: 1.5rem;
+  background-color: #415A77;
+} 
+
+
+
+
 
 /* Content below the animation canvas */
 .page-content {
@@ -82,18 +135,4 @@ canvas {
   color: white; /* Switched to white for visibility on black background */
   background-color: #111; /* Contrast background for scrollable content */
   min-height: 50vh;
-}
-
-/* Landscape orientation */
-@media (orientation: landscape) {
-  .overlay-heading {
-    font-size: 6vw;
-  }
-}
-
-/* Portrait orientation */
-@media (orientation: portrait) {
-  .overlay-heading {
-    font-size: 12vw;
-  }
 }
