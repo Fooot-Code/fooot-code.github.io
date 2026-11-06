@@ -110,23 +110,43 @@ canvas {
 } 
 
 
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  gap: 1rem; /* Adds nice spacing between heading and buttons */
+}
+
 .overview button { 
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-
   background-color: #415A7780;
-  transition: font-size 0.5s, background-color 0.5s;
-
-
+  border: none;
+  color: #bdede0;
+  border-radius: 5px;
+  cursor: pointer;     
+  transition: font-size 0.3s, background-color 0.3s;
 } 
 
 .overview button:hover { 
-  font-size: 1.5rem;
   background-color: #415A77;
-} 
+}
 
+@keyframes zoomIn {
+  to {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
 
-
+.animate-zoom {
+  animation: zoomIn 0.5s;
+  z-index: 1;
+}
 
 
 /* Content below the animation canvas */
