@@ -22,9 +22,10 @@ function initDrops() {
     columns = Math.floor(canvas.width / fontSize);
     rainDrops = [];
     for (let x = 0; x < columns; x++) {
-        rainDrops[x] = 1;
+        rainDrops[x] = Math.floor(Math.random() * (canvas.height / fontSize));
     }
 }
+
 initDrops();
 
 // Draw the animation

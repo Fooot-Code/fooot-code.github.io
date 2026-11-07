@@ -7,7 +7,7 @@ if (buttons.length > 0) {
             
             button.addEventListener("animationend", () => {
                 button.classList.remove("animate-zoom")
-                window.location.href = button.textContent.trim().toLowerCase() + ".html";
+                window.location.href = button.id.trim().toLowerCase() + ".html";
             });
             
         }, { once: true });
