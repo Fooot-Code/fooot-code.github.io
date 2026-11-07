@@ -262,11 +262,36 @@ h1 {
 
 .cert-images {
   max-width: 8rem;
-  border-radius: 4rem;
 }
 
-.cert-bullets {
+.projects .carosel {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  max-height: 12rem;
+
+}
+
+.projects .carosel::-webkit-scrollbar {
+  display: none;
+
+}
+
+.projects .cert-bullets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style-type: none;
+  scroll-snap-align: center;
+  flex: 0 0 100%; 
+
+  
+}
+
+.projects .cert-bullets p {
+  margin-left: 1rem;
 }
 
 .abt-me {
