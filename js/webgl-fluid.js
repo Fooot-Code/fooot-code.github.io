@@ -47,7 +47,7 @@ const canvas = document.getElementsByTagName("canvas")[0];
 resizeCanvas();
 
 // Set the properties from the config file
-fetch("config.json")
+fetch("js/config.json")
   .then((response) => response.json())
   .then((config) => {
     runSimulation(config);
@@ -954,7 +954,7 @@ function runSimulation(config) {
   let sunrays;
   let sunraysTemp;
 
-  let ditheringTexture = createTextureAsync("LDR_LLL1_0.png");
+  let ditheringTexture = createTextureAsync("images/LDR_LLL1_0.png");
 
   const blurProgram = new Program(blurVertexShader, blurShader);
   const copyProgram = new Program(baseVertexShader, copyShader);
