@@ -267,6 +267,25 @@ h1 {
   max-width: 8rem;
 }
 
+@keyframes rotate {
+  from { offset-distance: 0%;}
+  to { offset-distance: 100%; }
+}
+
+.contact-img {
+  max-width: 8rem;
+  margin: 2rem;
+  
+
+  
+}
+
+#github {
+  offset-path: circle(50% at 25% 25%);
+  animation: rotate 2s linear infinite;
+}
+
+
 .projects .carosel {
   display: flex;
   flex-direction: column;
