@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Brennon Hill</title>
-    <link rel="stylesheet" href="/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projects</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="javascriptPracice.html">JavaScript Practice</a></li>
-            <li><a href="moreAboutMe.html">About Me</a></li>
-        </ul>
-    </nav>
+	<canvas id="cmatrix"></canvas>
+	<div class="hero">
+		<div class="projects">
+			<h1>Projects</h1>
+			<ul>
+				<li>
+					<b>NASA HUNCH</b> - AI Preventative Maintenance System
+						<ul>
+							<li>
+								Helped develop the architecture of an AI system designed to identify potential anomalies in ISS life-support operations.
+							</li>
+							<li>
+								Researched NASA's Environmental Control and Life Support System; the team received a Letter of Recommendation from the director of NASA HUNCH and was selected to present at Johnson Space Center in Houston.
+							</li>
+						</ul>
+				</li>
 
-    <div class="container">
-        <div class="hero">
-            <h1>My Projects</h1>
-            <p class="tagline">Things I've built along the way</p>
-        </div>
+				<li>
+					<b>NASA HUNCH</b> - AI Plant Growth Lab
+						<ul>
+							<li>
+								Lead software development on a three-student team building an automated plant-growth system for space-related research.
+							</li>
+							<li>
+								Develop Raspberry Pi controls for environmental sensors, nutrient dosing, AI monitoring, and robotic pollination.
+							</li>
+						</ul>
+				</li>
 
-        <h2>Featured Work</h2>
-        <p class="bio">Here's a collection of projects I've worked on, ranging from robotics to game development:</p>
+				<li>
+					<b>Capstone</b> - Programming Language
+						<ul>
+							<li>
+								Building my own programming language based on Python and C.
+							</li>
+							<li>
+								Will transpile into C.
+							</li>
+							<li>
+								Main syntax is designed to be very user friendly and include a lot of words and fewer symbols.
+							</li>
+						</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<div class="nav-bar">
+			<ul class="nav-bar">
+				<button id="index" class="sections">Home</button>
+				<button id="about-me" class="sections">About Me</button>
+				<button id="contact" class="sections">Contact Information</button>
+			</ul>
+		</div>
+	</div>
 
-        <div class="projects">
-            <a href="https://github.com/A-U-R-A/Final-AURA">NASA AI Preventative Maintenance System</a>
-            <a href="https://github.com/FRC-1799/AprilTag-And-Coral-Detection">Robotics Image Detection</a>
-            <a href="https://github.com/Fooot-Code/JamesBond">James Bond Card Game</a>
-            <a href="https://github.com/Fooot-Code/Pygame-Calculator">Pygame Calculator</a>
-        </div>
 
-        <h2>What I'm Working On</h2>
-        <p class="bio">
-            I'm currently expanding my portfolio with new projects in automation and machine learning.
-            Check back soon for updates, or visit my GitHub profile to see my latest work.
-        </p>
-    </div>
+	
+	<script src="js/script.js"></script>
+	<script src="js/matrixAnimation.js"></script>
 </body>
 </html>

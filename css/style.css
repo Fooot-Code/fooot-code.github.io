@@ -1,0 +1,403 @@
+@font-face {
+  font-family: Jetbrains;
+  src: url(/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+
+}
+
+/* Hero section wrapper for canvas and heading */
+.hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The animated canvas fills the hero section */
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  z-index: 1;
+  width: fit-content;
+  pointer-events: none;
+  min-height: 100vh;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* The main heading centered inside the hero flex container */
+/* The main heading of the website in the centre of the animation */
+.overlay-heading {
+  font-family: Jetbrains, monospace;
+  font-weight: bold; 
+  color: #bdede0;
+  font-size: 8vw;
+  z-index: 1; /* above canvas */
+
+  text-shadow: 0 0 0.7rem black;
+
+  
+  /* Flex centering inside the hero */
+  text-align: center;
+
+  /* Typing effect fix: use overflow hidden + steps without animating width of the centered box */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Keeps it constrained to its layout box */
+  animation: typing 2s steps(40, end) forwards;
+}
+
+.sections {
+  font-family: Jetbrains, monospace;
+  font-weight: normal;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  
+  color: #bdede0;
+  border-radius: 10px;
+  padding: 0.5rem;
+
+  pointer-events: stroke;
+  cursor: pointer;     
+
+
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  gap: 1rem; /* Adds nice spacing between heading and buttons */
+}
+
+
+.overview li { 
+  list-style-type: none;
+  display: flex;
+} 
+
+
+
+
+.overview button { 
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #415A7780;
+  color: #bdede0;
+  border-radius: 20px;
+  border-width: 3px;
+  cursor: pointer;     
+  /* Track padding changes over 0.3 seconds */
+  transition: padding 0.3s, font-size 0.3s, background-color 0.3s;
+} 
+
+.overview button:hover { 
+  background-color: #415A77;
+  /* Increase padding on hover (e.g., adding 0.2rem to top/bottom and 0.5rem to sides) */
+  padding: 0.7rem 1.5rem;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: translateY(0) rotate(0deg); 
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1); /* Accelerate downward */
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg); /* Halfway through the bounce and rotation */
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1); /* Decelerate upward */
+  }
+  100% {
+    transform: translateY(0) rotate(360deg); /* Completes the full spin back on the ground */
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+}
+
+
+.animate-zoom {
+  animation: zoomIn 0.5s;
+}
+
+h1 {
+  font-family: Jetbrains, monospace;
+  color: #bdede0;
+  font-size: 2.5rem;
+}
+
+.projects {
+  margin-top: 1rem;
+
+  min-width: 50vw;
+  max-width: 50vw;
+  padding: 1rem;
+  border-radius: 1rem; 
+  
+  /* 1. Make the border transparent so the background gradient shines through */
+  border: 0.3rem solid transparent;
+  
+  /* 2. Layer 1 (inner background) & Layer 2 (border gradient) */
+  background: 
+    linear-gradient(#0d1b2a, #0d1b2a) padding-box, 
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(56, 56, 56) 100%) border-box;
+}
+
+
+
+
+/* Restores standard padding to the main project list */
+.projects ul {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #EC5766;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.5rem;
+}
+
+
+/* Adds vertical space between list entries for better legibility */
+.projects li {
+  
+  list-style-type: '> ';
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.projects li li {
+  color: #FFFFFF;
+  list-style-type: disc;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+  z-index: 1;
+
+  font-family: Jetbrains, monospace;
+  font-weight: normal;
+
+  list-style-type: none;
+  
+  color: #bdede0;
+  border-radius: 10px;
+  padding: 0.5rem;
+  pointer-events: auto;
+}
+
+
+.nav-bar button { 
+  padding: 0.7rem 1rem;
+  margin: 0.3rem;
+  font-size: 1rem;
+  background-color: #415A7780;
+  color: #bdede0;
+  border-radius: 20px;
+  border-width: 3px;
+  cursor: pointer;     
+  /* Track padding changes over 0.3 seconds */
+  transition: padding 0.3s, font-size 0.3s, background-color 0.3s;
+} 
+
+.nav-bar button:hover { 
+  background-color: #415A77;
+  /* Increase padding on hover (e.g., adding 0.2rem to top/bottom and 0.5rem to sides) */
+  padding: 1rem 1.5rem;
+}
+
+
+#cmatrix {
+  position: fixed;
+  z-index: 0;  
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+#me {
+  max-width: 8rem;
+  border-radius: 4rem;
+}
+
+.cert-images {
+  max-width: 8rem;
+}
+
+@keyframes rotate {
+  from { offset-distance: 0%;}
+  to { offset-distance: 100%; }
+}
+
+.social-container {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+.contact-img {
+  max-width: 4rem; /* Adjusted for orbital layout */
+  margin: 0;        /* Removed 1.5rem margin that pushed image off-center */
+  display: block;
+}
+
+#github, #gmail, #linkedin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  height: fit-content;
+  
+  /* circle(radius at center_x center_y) */
+  offset-path: circle(80px at 50% 50%);
+  offset-anchor: center;
+  offset-rotate: 0deg;
+  animation: rotate 21s linear infinite;
+}
+
+#github {
+  animation-delay: -14s;
+}
+
+#gmail {
+  animation-delay: -7s;
+}
+
+#linkedin {
+  animation-delay: 0s;
+}
+
+.social-container:has(:hover) #github,
+.social-container:has(:hover) #gmail,
+.social-container:has(:hover) #linkedin {
+  animation-play-state: paused;
+}
+
+hr {
+  border-color: #EC5766;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.2rem;
+  color: #EC5766;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.projects .carosel {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  max-height: 12rem;
+
+}
+
+.projects .carosel::-webkit-scrollbar {
+  display: none;
+
+}
+
+.projects .cert-bullets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  scroll-snap-align: center;
+  flex: 0 0 100%; 
+
+  
+}
+
+.projects .cert-bullets p {
+  margin-left: 1rem;
+}
+
+.abt-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between
+}
+
+.resume-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.in-tab {
+  color: #EC5766;
+  
+}
+
+.resume-section {
+  margin-bottom: 1rem;
+}
+
+.resume-link {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 4px; 
+  text-decoration: none;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    max-width: 100vw;
+  }
+  
+}
