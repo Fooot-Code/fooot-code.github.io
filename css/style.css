@@ -329,6 +329,7 @@ hr {
 h2 {
   font-size: 1.2rem;
   margin-top: 0.7rem;
+  margin-bottom: 0.2rem;
   color: #EC5766;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -369,6 +370,29 @@ h2 {
   justify-content: center;
   align-items: center;
   justify-content: space-between
+}
+
+.resume-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.in-tab {
+  color: #EC5766;
+  
+}
+
+.resume-section {
+  margin-bottom: 1rem;
+}
+
+.resume-link {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 4px; 
+  text-decoration: none;
+  
 }
 
 @media screen and (max-width: 768px) {
