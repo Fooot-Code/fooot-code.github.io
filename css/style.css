@@ -1,6 +1,6 @@
 @font-face {
   font-family: Jetbrains;
-  src: url(./fonts/JetBrainsMono-VariableFont_wght.ttf);
+  src: url(/fonts/JetBrainsMono-VariableFont_wght.ttf);
 }
 
 *,
@@ -169,6 +169,7 @@ h1 {
 .projects {
   margin-top: 1rem;
 
+  min-width: 50vw;
   max-width: 50vw;
   padding: 1rem;
   border-radius: 1rem; 
@@ -272,19 +273,65 @@ h1 {
   to { offset-distance: 100%; }
 }
 
-.contact-img {
-  max-width: 8rem;
-  margin: 2rem;
-  
+.social-container {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
 
+.contact-img {
+  max-width: 4rem; /* Adjusted for orbital layout */
+  margin: 0;        /* Removed 1.5rem margin that pushed image off-center */
+  display: block;
+}
+
+#github, #gmail, #linkedin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  height: fit-content;
   
+  /* circle(radius at center_x center_y) */
+  offset-path: circle(80px at 50% 50%);
+  offset-anchor: center;
+  offset-rotate: 0deg;
+  animation: rotate 21s linear infinite;
 }
 
 #github {
-  offset-path: circle(50% at 25% 25%);
-  animation: rotate 2s linear infinite;
+  animation-delay: -14s;
 }
 
+#gmail {
+  animation-delay: -7s;
+}
+
+#linkedin {
+  animation-delay: 0s;
+}
+
+.social-container:has(:hover) #github,
+.social-container:has(:hover) #gmail,
+.social-container:has(:hover) #linkedin {
+  animation-play-state: paused;
+}
+
+hr {
+  border-color: #EC5766;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+  color: #EC5766;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .projects .carosel {
   display: flex;
