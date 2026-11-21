@@ -350,8 +350,9 @@ h2 {
 
 .projects .cert-bullets {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+
   list-style-type: none;
   scroll-snap-align: center;
   flex: 0 0 100%; 
@@ -361,6 +362,7 @@ h2 {
 
 .projects .cert-bullets p {
   margin-left: 1rem;
+  text-align: center;
 }
 
 .abt-me {
